@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "string.h": "c",
+        "opus.h": "c",
+        "stdio.h": "c",
+        "fcntl.h": "c"
+    }
+}
