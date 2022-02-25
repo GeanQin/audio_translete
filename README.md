@@ -7,9 +7,9 @@ An audio translete tool.
 * opus
 
 # support param
-#define AUDIO_SAMPLERATE 16000
-#define AUDIO_FPS 25
-#define AUDIO_BIT_DEPTH 16
+#define AUDIO_SAMPLERATE 16000<br>
+#define AUDIO_FPS 25<br>
+#define AUDIO_BIT_DEPTH 16<br>
 #define AUDIO_CHANNELS 1
 
 # usage
