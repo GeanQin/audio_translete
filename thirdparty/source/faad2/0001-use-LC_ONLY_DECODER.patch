@@ -1,0 +1,32 @@
+From 39834d7732c14576c63ed416b2d0c2edb9c1b020 Mon Sep 17 00:00:00 2001
+From: qinjian <jian.qin@eques.com.cn>
+Date: Tue, 29 Aug 2023 11:24:28 +0800
+Subject: [PATCH] use LC_ONLY_DECODER
+
+---
+ libfaad/common.h | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/libfaad/common.h b/libfaad/common.h
+index 897a0f0..df23360 100644
+--- a/libfaad/common.h
++++ b/libfaad/common.h
+@@ -108,13 +108,14 @@ extern "C" {
+ 
+ 
+ // Define LC_ONLY_DECODER if you want a pure AAC LC decoder (independant of SBR_DEC and PS_DEC)
+-//#define LC_ONLY_DECODER
++#define LC_ONLY_DECODER
+ #ifdef LC_ONLY_DECODER
+   #undef LD_DEC
+   #undef LTP_DEC
+   #undef MAIN_DEC
+   #undef SSR_DEC
+   #undef DRM
++  #undef DRM_PS
+   #undef ALLOW_SMALL_FRAMELENGTH
+   #undef ERROR_RESILIENCE
+ #endif
+-- 
+2.25.1
+

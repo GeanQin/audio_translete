@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "audio_trans.h": "c",
+        "stdlib.h": "c",
+        "faac.h": "c"
+    }
+}
