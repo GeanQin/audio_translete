@@ -101,7 +101,7 @@ int g711a_decode(char *g711a_data, int g711a_len, char *pcm_buf, int pcm_len)
 
     if (g711a_len * 2 > pcm_len)
     {
-        fprintf(stderr, "The pcm_buf do not have enough space!");
+        fprintf(stderr, "The pcm_buf do not have enough space!\n");
         return -1;
     }
 

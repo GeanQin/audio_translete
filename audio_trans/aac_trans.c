@@ -167,12 +167,22 @@ int aac_decode_frame(codec_handle handle, audio_param_t audio_param, unsigned ch
     pcm_len = frame_info.samples * frame_info.channels;
     if (audio_param.channels != 1)
     {
+        if (pcm_len >= output_buf_size)
+        {
+            fprintf(stderr, "[%s]output_buf len is not enough\n", __func__);
+            return -1;
+        }
         memcpy(output_buf, pcm_data, pcm_len);
         return pcm_len;
     }
 
     for (i = 0; i < pcm_len / 4; i++)
     {
+        if (i * 2 >= output_buf_size)
+        {
+            fprintf(stderr, "[%s]output_buf len is not enough\n", __func__);
+            return -1;
+        }
         memcpy(output_buf + i * 2, pcm_data + i * 4, audio_param.bit_depth / sizeof(unsigned char));
         /* code */
     }
